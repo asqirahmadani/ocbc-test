@@ -1,0 +1,21 @@
+func main() {
+	log.Print(isPrimary([]int{3,2,1,5,6,4}, 2))
+}
+
+func isPrimary(data []int, num int) int {
+	sell := []int{}
+
+	for len(sell) != num {
+		max := 0
+		var idx int
+		for j, i:= range data {
+			if i > max && !slices.Contains(sell, j) {
+				max = i
+				idx = j
+			}
+		}
+		sell = append(sell, idx)
+	}
+
+	return data[sell[len(sell) - 1]]
+}

@@ -1,0 +1,29 @@
+func main() {
+	log.Print(CountIsland())
+}
+
+func CountIsland() int {
+	data := [][]int{
+    	{0, 0, 1},
+    	{0, 1, 1},
+		{0, 0, 0},
+		{1, 0, 0},
+		{0, 0, 0},
+		{0, 1, 0},
+		{0, 1, 1},
+		{0, 0, 1},
+		{1, 0, 0},
+	}
+
+	count := 0
+
+	for i:=range data {
+		for j:=0; j<len(data[i]); j++ {
+			if data[i][j] == 1 {
+				count++
+			}
+		}
+	}
+
+	return count
+}

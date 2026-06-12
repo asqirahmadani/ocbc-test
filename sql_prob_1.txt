@@ -1,0 +1,6 @@
+SELECT
+    i.name AS item_name,
+    s.name AS seller_name
+FROM items i
+JOIN sellers s ON s.id = i.sellerId
+WHERE rating > 4;
